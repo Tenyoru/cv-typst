@@ -4,13 +4,11 @@
 #let default_retraits = 10
 
 #let edit_date() = {
-  place(
-    top + right,
-    block[
-      #set text(size: 5pt, font: "DejaVu Sans Mono", fill: gray)
-      \This document was last updated on #datetime.today().display("[year]-[month]-[day]") using #underline(link("https://typst.app/home")[*Typst*])
-    ],
-  )
+  let date = datetime.today().display("[month repr:long] [year]")
+  place(top + right, dy: 15pt, block[
+    #set text(style: "italic", size: 7pt, font: "DejaVu Sans Mono", fill: gray)
+    \Last updated in #(lower(date))
+  ])
 }
 
 #let resume(body) = {
@@ -19,13 +17,12 @@
   // show link: underline
   // show link: set underline(offset: 3pt)
 
-  set page(paper: "us-letter", margin: (x: 0.5in, y: 0.5in), numbering: (page, pages) => {
-    set text(fill: gray)
+  set page(paper: "us-letter", margin: (x: 0.5in, y: 0.5in), header: edit_date(), numbering: (page, pages) => {
+    set text(fill: gray, style: "italic")
     str(page) + " / " + str(pages)
   })
 
   set text(size: 11pt)
-  edit_date()
   body
 }
 
@@ -40,9 +37,9 @@
 
 #let header(name: "Jake Ryan", phone: "", email: "", linkedin: "", github: "", site: "") = {
   align(center, [
-    #v(10pt)
+    // #v(10pt)
     #name_header(name)
-    #v(-5pt)
+    #v(-7pt)
 
     #if phone != "" [
       #insert_image("phone") #phone
