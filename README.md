@@ -2,7 +2,16 @@
 
 ## TODO
 
-- [ ] Add support for loading configuration from **TOML**
-- [ ] Add support for loading configuration from **YAML**
-- [ ] Implement a **Config** struct for centralized settings
-- [ ] Enable dynamic **color customization**
+* [ ] **Add configuration file support**
+  * [ ] Load settings from **TOML**
+  * [ ] Load settings from **YAML**
+
+* [ ] **Implement configuration system**
+  * [ ] Create a centralized `Config` struct
+  * [ ] Allow dynamic **color customization**
+
+* [ ] **Improve visual design**
+  * [ ] Adjust **icon size** (make smaller)
+  * [ ] Redesign **header layout**
+  * [ ] Implement a **custom header**
+  * [ ] Change **font style and family**
