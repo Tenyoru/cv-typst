@@ -15,3 +15,6 @@
   * [ ] Redesign **header layout**
   * [x] Implement a **custom header**
   * [ ] Change **font style and family**
+
+---
+Original repository: [tzx/NNJR](https://github.com/tzx/NNJR)
