@@ -155,5 +155,5 @@
 
 #let lang_item(lang: "English", level: "Native") = {
   item_block()
-  block[ - *#lang*: #level ]
+  pad(left: 1em, right: 0.5em, block[ *#lang*: #level ])
 }
