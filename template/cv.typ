@@ -18,7 +18,7 @@
 
 #let edit_date() = {
   let date = datetime.today().display("[month repr:long] [year]")
-  place(top + right, dy: -20pt, block[
+  place(top + right, dy: -10pt, block[
     #set text(style: "italic", size: 7pt, font: "DejaVu Sans Mono", fill: gray)
     \Last updated in #(lower(date))
   ])
@@ -46,7 +46,7 @@
 
 #let contacts(body) = {
   center_alignment(body)
-  v(-3pt)
+  // v(-3pt)
 }
 
 #let name_header(name) = {
@@ -77,6 +77,7 @@
 
 #let header(name: "Jake Ryan", phone: "", email: "", linkedin: "", github: "", site: "", location: "") = {
   center_alignment[
+    #v(7pt)
     #name_header(name)
     #v(-10pt)
   ]
