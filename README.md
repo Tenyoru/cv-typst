@@ -11,7 +11,7 @@
   * [ ] Allow dynamic **color customization**
 
 * [ ] **Improve visual design**
-  * [ ] Adjust **icon size** (make smaller)
+  * [x] Adjust **icon size** (make smaller)
   * [ ] Redesign **header layout**
-  * [ ] Implement a **custom header**
+  * [x] Implement a **custom header**
   * [ ] Change **font style and family**
