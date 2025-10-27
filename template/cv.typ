@@ -18,7 +18,7 @@
 
 #let edit_date() = {
   let date = datetime.today().display("[month repr:long] [year]")
-  place(top + right, dy: 15pt, block[
+  place(top + right, dy: -20pt, block[
     #set text(style: "italic", size: 7pt, font: "DejaVu Sans Mono", fill: gray)
     \Last updated in #(lower(date))
   ])
@@ -30,10 +30,11 @@
   // show link: underline
   // show link: set underline(offset: 3pt)
 
-  set page(paper: "us-letter", margin: (x: 0.5in, y: 0.5in), header: edit_date(), numbering: (page, pages) => {
+  set page(paper: "us-letter", margin: (x: 0.5in, y: 0.5in), numbering: (page, pages) => {
     set text(fill: gray, style: "italic")
     str(page) + " / " + str(pages)
   })
+  edit_date()
 
   set text(size: 11pt)
   body

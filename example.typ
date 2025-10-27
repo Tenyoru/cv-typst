@@ -1,6 +1,6 @@
 #import "template/cv.typ": *
 
-#set_config(body: (theme: (line: green, accent: red), block_spacing: none))
+#set_config(body: (theme: (line: red, accent: blue), block_spacing: none))
 
 #let contact = (
   name: "Jake Ryan",
