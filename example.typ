@@ -1,4 +1,4 @@
-#import "template/cv.typ": *
+#import "cv.typ": *
 
 #set_config(body: (theme: (line: red, accent: blue), block_spacing: none))
 
