@@ -58,7 +58,7 @@
 }
 
 #let contact_item(image, content, link: none, image_baseline: 0.15em, image_height: 0.8em) = {
-  box(baseline: 0.20em, std.image("../images/" + image), height: 1em)
+  box(baseline: 0.20em, std.image("images/" + image), height: 1em)
   h(0.2em)
   if link != none {
     std.link(link)[#content]
