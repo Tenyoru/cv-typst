@@ -145,6 +145,7 @@
   date: "June 1837 - May 1845",
   location: "Foo, BA",
   description: none,
+  stack: none,
   ..points,
 ) = {
   item_block()
@@ -157,10 +158,17 @@
       _#location _
     ])
 
+    #let left_pad = 0.8em
     #if description != none {
-      pad(left: 1em)[#description]
+      pad(left: left_pad)[#description]
     }
     #list(..points)
+
+    #if stack != none {
+      pad(left: left_pad)[
+        Stack: _#stack _
+      ]
+    }
   ])
 }
 

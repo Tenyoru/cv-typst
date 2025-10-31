@@ -49,6 +49,7 @@
   location: "College Station, TX",
   date: "June 2020 - Present",
   description: "Conducted research on software engineering education and data-driven analysis.",
+  stack: "C--, rUST, Zig",
   [Developed a REST API using FastAPI and PostgreSQL to store data from learning management systems],
   [Developed a full-stack web application using Flask, React, PostgreSQL and Docker to analyze GitHub data],
   [Explored ways to visualize GitHub collaboration in a classroom setting],
