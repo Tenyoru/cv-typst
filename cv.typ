@@ -115,18 +115,38 @@
   }
 }
 
-#let edu_item(name: "Sample University", degree: "B.S in Bullshit", location: "Foo, BA", date: "Aug. 1600 - May 1750") = {
+#let edu_item(
+  name: "Sample University",
+  degree: "B.S in Bullshit",
+  location: "Foo, BA",
+  date: "Aug. 1600 - May 1750",
+  ..content,
+) = {
   item_block()
-  pad(left: 1em, right: 0.5em, grid(columns: (3fr, 1fr), align(left)[
-    *#name* \
-    _#degree _
-  ], align(right)[
-    #location \
-    _#date _
-  ]))
+
+  pad(left: 1em, right: 0.5em, box[
+    #grid(columns: (3fr, 1fr), align(left)[
+      *#name* \
+      _#degree _
+    ], align(right)[
+      #location \
+      _#date _
+    ])
+
+    #if content != none {
+      list(..content)
+    }
+  ])
 }
 
-#let exp_item(name: "Sample Workplace", role: "Worker", date: "June 1837 - May 1845", location: "Foo, BA", ..points) = {
+#let exp_item(
+  name: "Sample Workplace",
+  role: "Worker",
+  date: "June 1837 - May 1845",
+  location: "Foo, BA",
+  description: none,
+  ..points,
+) = {
   item_block()
   pad(left: 1em, right: 0.5em, box[
     #grid(columns: (3fr, 1fr), align(left)[
@@ -136,6 +156,10 @@
       #date \
       _#location _
     ])
+
+    #if description != none {
+      pad(left: 1em)[#description]
+    }
     #list(..points)
   ])
 }

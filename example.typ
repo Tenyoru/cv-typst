@@ -30,6 +30,10 @@
   degree: "Bachelor of Arts in Computer Science, Minor in Business",
   location: "Georgetown, TX",
   date: "Aug. 2018 - May 2021",
+  [GPA 1000/5],
+  [Relevant coursework: Data Structures, Algorithms, Operating Systems, Databases, Business Analytics],
+  [Led a student research project on distributed systems performance optimization],
+  [Developed a web application for campus organizations using React and Flask],
 )
 #edu_item(
   name: "Blinn College",
@@ -44,6 +48,7 @@
   name: "Texas A&M University",
   location: "College Station, TX",
   date: "June 2020 - Present",
+  description: "Conducted research on software engineering education and data-driven analysis.",
   [Developed a REST API using FastAPI and PostgreSQL to store data from learning management systems],
   [Developed a full-stack web application using Flask, React, PostgreSQL and Docker to analyze GitHub data],
   [Explored ways to visualize GitHub collaboration in a classroom setting],
